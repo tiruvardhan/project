@@ -1,0 +1,69 @@
+body {
+  background-color: #121212;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font to the body */
+}
+
+.custom-form-box {
+  background-color: #121212;
+  border: 4px solid;
+  border-image: linear-gradient(to right, skyblue 50%, lime 50%);
+  border-image-slice: 1;
+}
+
+.form-control.line-bar {
+  border: none;
+  border-bottom: 2px solid #ced4da;
+  background-color: transparent;
+  color: white;
+  padding: 6px 0;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 2;
+  vertical-align: middle;
+}
+
+.form-control.line-bar:focus {
+  border-bottom-color: #80bdff;
+  box-shadow: none;
+}
+
+h1 {
+  font-size: 24px; /* Adjust heading font size */
+  font-weight: 700; /* Use bold weight for heading */
+}
+
+label {
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.btn-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}

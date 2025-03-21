@@ -1,0 +1,142 @@
+.puppet-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .puppet {
+    position: relative;
+    width: 10vw;
+    height: 20vw;
+    background-color: #333;
+    border-radius: 1vw;
+    animation: puppetSway 4s ease-in-out infinite alternate, puppetBob 5s ease-in-out infinite alternate;
+  }
+  
+  .puppet-body {
+    width: 5.33vw;
+    height: 10vw;
+    background-color: #555;
+    position: absolute;
+    top: 6.67vw;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0.33vw;
+  }
+  
+  .puppet-head {
+    width: 6.67vw;
+    height: 6.67vw;
+    background-color: #777;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+  }
+  
+  .strings {
+    position: absolute;
+    top: -3.33vw;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .string {
+    width: 0.13vw;
+    height: 2vw;
+    background-color: #999;
+    margin: 0.33vw 0.16vw; /* Added margin for spacing */
+    animation: stringJiggle 1s ease-in-out infinite alternate;
+  }
+  
+  .puppet-legs {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .puppet-leg {
+    width: 1.33vw;
+    height: 4vw;
+    background-color: #555;
+    margin: 0 0.33vw;
+    border-radius: 0.33vw;
+  }
+  
+  /* Animations (Same as before) */
+  
+  @keyframes puppetSway {
+    0% {
+      transform: rotate(-2deg);
+    }
+    100% {
+      transform: rotate(2deg);
+    }
+  }
+  
+  @keyframes puppetBob {
+    0% {
+      transform: translateY(-2px);
+    }
+    100% {
+      transform: translateY(2px);
+    }
+  }
+  
+  @keyframes stringJiggle {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(1px);
+    }
+  }
+  
+  /* Freedom animation */
+  .puppet.free {
+      animation: puppetFreedom 1s ease-in-out forwards;
+  }
+  
+  @keyframes puppetFreedom {
+      0%{
+          transform: scale(1);
+      }
+      100%{
+          transform: scale(1.5);
+      }
+  }
+  
+  /* Responsive adjustments (Same as before) */
+  
+  @media (max-width: 768px) {
+    /* ... (Responsive styles) ... */
+  }
+
+  /* Transformation animation */
+.puppet.transform {
+    animation: puppetToHuman 2s ease-in-out forwards;
+}
+
+@keyframes puppetToHuman {
+    0% {
+        transform: scale(1);
+        border-radius: 1vw;
+    }
+    50% {
+        transform: scale(1.2);
+        border-radius: 50%;
+    }
+    100% {
+        transform: scale(1);
+        border-radius: 50%;
+        width: 5vw; /* Adjust width to human shape */
+        height: 15vw; /* Adjust height to human shape */
+        background-color: #aaa; /* Change color to human skin tone */
+    }
+}
